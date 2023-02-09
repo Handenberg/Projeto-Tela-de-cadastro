@@ -21,9 +21,11 @@ def inserir_codigo():
     data_criacao = data_criacao.strftime("%d/%m/%Y %H:%M")
     codigo = materiais.shape[0] + len(lista_codigos)+1
     codigo_str = "COD-{}".format(codigo)
-    lista_codigos.append((codigo_str, descricao, tipo, quant, data_criacao))
+    lista_codigos.append(codigo_str, descricao, tipo, quant, data_criacao)
+    #entry_descricao.delete(0,999) #OPCIONAL
+    #entry_quant.delete(0,999) #OPCIONAL
 
-
+#PARA LIMPAR O FORMULÁRIO PODE-SE ADICIONAR AS LINHAS DA FUNÇÃO "LIMPAR' E COLOCA-LAS DIRETO NO BOTÃO "GERAR CÓDIGO"
 def limpar():
     entry_descricao.delete(0,999)
     entry_quant.delete(0,999)
